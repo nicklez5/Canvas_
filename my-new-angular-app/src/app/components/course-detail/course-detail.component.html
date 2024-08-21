@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <div class="container-flex">
+        <div class="sidenav">
+            <a [routerLink]="['/course',this.courseID,'assignments']">Assignments</a>
+            <a [routerLink]="['/course',this.courseID, 'lectures']">Lectures</a>
+            <a [routerLink]="['/course',this.courseID,'students']">Students</a>
+            <a [routerLink]="['/course',this.courseID,'quizzes']">Quizzes/Tests</a>
+            <a [routerLink]="['/course',this.courseID,'discussion']">Discussion</a>
+            <a [routerLink]="['/course',this.courseID,'grades']">Grades</a>
+            <a [routerLink]="['/profile',this.profileID]">Profile</a>
+        </div>
+    </div>
+    <main>
+        <p style="text-align:center;font-size:40px">Course Name: <strong>{{this.currentCourse.name }}</strong></p>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+      <div class="inner-main">
+          <h2 class="mb-4">User Profile</h2>
+          <p><strong>First Name:</strong> {{this.currentUser.first_name}}</p>
+          <p><strong>Last Name:</strong> {{ this.currentUser.last_name}}</p>
+          <p><strong>Date of Birth:</strong> {{this.currentUser.date_of_birth}}</p>
+          <button [routerLink]="['/profile',this.profileID,'edit']">Edit</button>
+          <button Backbutton>Back</button>
+      </div>
+  </div>
+</div>

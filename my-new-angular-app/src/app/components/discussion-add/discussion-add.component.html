@@ -1,0 +1,11 @@
+<div class="auth-wrapper">
+    <form class="form-signin" [formGroup]="messageForm" (ngSubmit)="addMessage()">
+        <h3 class="h3 mb-3 font-weight-normal text-center">Add Message</h3>
+        <div class="form-group">
+            <label>Message</label>
+            <input type="text" class="form-control" formControlName="description" placeholder="Enter message" required>
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">Submit</button>
+    </form>
+    <button Backbutton>Back</button>
+</div>

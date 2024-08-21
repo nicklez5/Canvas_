@@ -1,0 +1,22 @@
+<h1>Discussion</h1>
+<hr>
+
+<table id="users">
+    <tr>
+        <th *ngFor = "let column of headers">
+            {{ column }}
+        </th>
+    </tr>
+    <tr *ngFor = "let x of this.threads">
+        <th>{{ x.id }}</th>
+        <th>{{ x.last_author }}</th>
+        <th>{{ x.last_description }}</th>
+        <th>{{ x.last_timestamp }} </th>
+        <th><button [routerLink]="['/course', this.courseID, 'discussion', x.id, 'view']">View</button> </th>
+        <th *ngIf="this.authService.isStaff">
+            <button (click)="delete_me(x.id)">Delete</button>
+        </th>
+    </tr>
+</table>
+<button [routerLink]="['/course', this.courseID, 'discussion','add']">Add Discussion</button>
+<button Backbutton>Back</button>

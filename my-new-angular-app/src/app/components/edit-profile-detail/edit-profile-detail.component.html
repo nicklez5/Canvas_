@@ -1,0 +1,18 @@
+<div class="auth-wrapper">
+    <form class="form-signin" [formGroup]="profileForm" (ngSubmit)="editProfile()">
+        <h3 class="h3 mb-3 font-weight-normal text-center">Edit Profile</h3>
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class="form-control" formControlName="firstname" placeholder="Enter first name" required>
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="form-control" formControlName="lastname" placeholder="Enter last name" required>
+        </div>
+        <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date" class="form-control" formControlName="date_of_birth" placeholder="Enter date" required>
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">Edit</button>
+    </form>
+</div>

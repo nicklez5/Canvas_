@@ -1,0 +1,27 @@
+<div class="auth-wrapper">
+    <form class="form-signin" [formGroup]="testForm" (ngSubmit)="addTest()">
+        <h3 class="h3 mb-3 font-weight-normal text-center">Add Test</h3>
+        <div class="form-group">
+            <label>Test Name</label>
+            <input type="text" class="form-control" formControlName="name" placeholder="Enter Test name" required>
+        </div>
+        <div class="form-group">
+            <label>Max Points</label>
+            <input type="number" class="form-control" formControlName="max_points" placeholder="Enter Max points" required>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input type="text" class="form-control" formControlName="description" placeholder="Enter description" required>
+        </div>
+        <div class="form-group">
+            <label>Date Due</label>
+            <input type="datetime-local" class="form-control" formControlName="date_due" placeholder="Enter Test Due Date" required>
+        </div>
+        <div class="form-group">
+            <label for="file">Choose File</label>
+            <input type="file"  (change)="uploadFile($event)">
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">Add</button>
+    </form>
+    <button Backbutton>Back</button>
+</div>

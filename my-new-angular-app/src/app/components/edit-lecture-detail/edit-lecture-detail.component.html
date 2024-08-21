@@ -1,0 +1,19 @@
+<div class="auth-wrapper">
+    <form class="form-signin" [formGroup]="lectureForm" (ngSubmit)="editLecture()">
+        <h3 class="h3 mb-3 font-weight-normal text-center">Edit Lecture</h3>
+        <div class="form-group">
+            <label>Lecture Name</label>
+            <input type="text" class="form-control" formControlName="name" placeholder="Enter Lecture name" required>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input type="text" class="form-control" formControlName="description" placeholder="Enter Description" required>
+        </div>
+        <div class="form-group">
+            <label for="file">Choose File</label>
+            <input type="file" (change)="uploadFile($event)">
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">Submit</button>
+    </form>
+    <button Backbutton>Back</button>
+</div>

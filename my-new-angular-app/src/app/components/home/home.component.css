@@ -1,0 +1,15 @@
+
+.row{
+    display: flex;
+    padding: 10px;
+}
+
+.column{
+    flex: 50%;
+    padding: 10px;
+    height: 150px;
+    background-color: mediumseagreen
+}
+.column:hover{
+    background-color: rgb(238, 121, 121)
+}

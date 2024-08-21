@@ -1,0 +1,18 @@
+<h1>Messages</h1>
+<hr>
+
+<table id="users">
+    <tr>
+        <th *ngFor = "let column of headers">
+            {{ column }}
+        </th>
+    </tr>
+    <tr *ngFor = "let x of this.messages">
+        <th>{{x.id}}</th>
+        <th>{{x.author}}</th>
+        <th>{{x.description}}</th>
+        <th>{{x.timestamp}}</th>
+    </tr>
+</table>
+<button [routerLink]="['/course', this.courseID, 'discussion', this.threadID, 'add']">Add Message</button>
+<button Backbutton>Back</button>
